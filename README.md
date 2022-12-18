@@ -25,16 +25,16 @@ The opcode `pall` prints all the values on the stack, starting from the top of t
 **Usage:** `pall`. If the stack is empty, `pall` don’t print anything.
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/push_pall_0.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/push_pall_0.m
 push 1$
 push 2$
 push 3$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/push_pall_0.m
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/push_pall_0.m
 3
 2
 1
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Pint opcode
@@ -44,18 +44,18 @@ The opcode `pint` prints the value at the top of the stack, followed by a new li
 **Usage:** `pint`. If the stack is empty, `pint` print an error message.
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/pint.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/pint.m
 push 1$
 pint$
 push 2$
 pint$
 push 3$
 pint$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/pint.m
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/pint.m
 1
 2
 3
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Pop opcode
@@ -65,7 +65,7 @@ The opcode `pop` removes the top element of the stack.
 **Usage:** `pop`. If the stack is empty, `pop` print an error message.
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/pop.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/pop.m
 push 1$
 push 2$
 push 3$
@@ -76,14 +76,14 @@ pop$
 pall$
 pop$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/pop.m
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/pop.m
 3
 2
 1
 2
 1
 1
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Swap opcode
@@ -93,21 +93,21 @@ The opcode `swap` swaps the top two elements of the stack.
 **Usage:** `swap`. If the stack contains less than two elements, `swap` print an error message.
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/swap.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/swap.m
 push 1$
 push 2$
 push 3$
 pall$
 swap$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/swap.m
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/swap.m
 3
 2
 1
 2
 3
 1
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Add opcode
@@ -120,20 +120,20 @@ The opcode `add` adds the top two elements of the stack. The result is stored in
 **Usage:** `add`. If the stack contains less than two elements, `add` print an error message.
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/add.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/add.m
 push 1$
 push 2$
 push 3$
 pall$
 add$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/swap.m
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/swap.m
 3
 2
 1
 5
 1
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Nop opcode
@@ -143,7 +143,7 @@ The opcode `nop` doesn’t do anything.
 **Usage:** `nop`.
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/nop.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/nop.m
 nop$
 push 1$
 nop$
@@ -154,14 +154,14 @@ nop$
 pall$
 nop$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/nop.m
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/nop.m
 3
 2
 1
 3
 2
 1
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Sub opcode
@@ -174,18 +174,18 @@ The opcode `sub` subtracts the top element of the stack from the second top elem
 **Usage:** `sub`. If the stack contains less than two elements, `sub` print an error message.
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/sub.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/sub.m
 push 1$
 push 2$
 push 10$
 push 3$
 sub$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/sub.m
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/sub.m
 7
 2
 1
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Div opcode
@@ -198,18 +198,18 @@ The opcode `div` divides the second top element of the stack by the top element 
 **Usage:** `div`. If the stack contains less than two elements, `div` print an error message.
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/div.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/div.m
 push 1$
 push 2$
 push 10$
 push 5$
 div$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/div.m 
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/div.m 
 2
 2
 1
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 ## Mul opcode
 
@@ -221,18 +221,18 @@ The opcode `mul` multiplies the second top element of the stack with the top ele
 **Usage:** `mul`. If the stack contains less than two elements, `mul` print an error message.
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/mul.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/mul.m
 push 1$
 push 2$
 push 20$
 push 5$
 mul$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/mul.m 
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/mul.m 
 100
 2
 1
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Mod opcode
@@ -245,18 +245,18 @@ The opcode `mod` computes the rest of the division of the second top element of 
 **Usage:** `mod`. If the stack contains less than two elements, `mod` print an error message.
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/mod.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/mod.m
 push 1$
 push 2$
 push 20$
 push 5$
 mod$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/mul.m 
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/mul.m 
 0
 2
 1
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Comments
@@ -264,7 +264,7 @@ $ amonkeyprogrammer@ubuntu:~/monty$
 Every good language comes with the capability of commenting. When the first non-space character of a line is `#`, treat this line as a comment (don’t do anything).
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/comments.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/comments.m
 #hello world$
 #hahahaha$
 #cisfun$
@@ -274,12 +274,12 @@ push 2$
 push 8$
 push 5$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/comments.m 
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/comments.m 
 5
 8
 2
 10
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Pchar opcode
@@ -292,12 +292,12 @@ The opcode `pchar` prints the char at the top of the stack, followed by a new li
 * If the stack is empty, `pchar` print an error message.
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/pchar.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/pchar.m
 push 72$
 pchar$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/pchar.m 
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/pchar.m 
 H
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Pstr opcode
@@ -307,7 +307,7 @@ The opcode `pstr` prints the string starting at the top of the stack, followed b
 **Usage:** `pstr`. If the stack is empty, `pstr` print only a new line
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/pstr.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/pstr.m
 push 1$
 push 2$
 push 3$
@@ -321,9 +321,9 @@ push 110$
 push 111$
 push 77$
 pstr$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/pstr.m 
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/pstr.m 
 Monty
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Rotl opcode
@@ -333,7 +333,7 @@ The opcode `rotl` rotates the stack to the top. The top element of the stack bec
 **Usage:** `rotl`
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/rotl.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/rotl.m
 push 1$
 push 2$
 push 3$
@@ -347,7 +347,7 @@ push 0$
 pall$
 rotl$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/rotl.m 
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/rotl.m 
 0
 9
 8
@@ -368,7 +368,7 @@ $ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/rotl.m
 2
 1
 0
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Rotr opcode
@@ -378,7 +378,7 @@ The opcode `rotr` rotates the stack to the bottom. The last element of the stack
 **Usage:** `rotr`
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/rotr.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/rotr.m
 push 1$
 push 2$
 push 3$
@@ -392,7 +392,7 @@ push 0$
 pall$
 rotr$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/rotr.m 
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/rotr.m 
 0
 9
 8
@@ -413,7 +413,7 @@ $ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/rotr.m
 4
 3
 2
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Stack opcode
@@ -434,7 +434,7 @@ The opcode `queue` sets the format of the data to a queue (FIFO).
 * The front of the queue becomes the top of the stack
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty$ cat -e bytecodes/queue_stack.m
+$ lanlokun@ubuntu:~/monty$ cat -e bytecodes/queue_stack.m
 queue$
 push 1$
 push 2$
@@ -451,7 +451,7 @@ queue$
 push 11111$
 add$
 pall$
-$ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/queue_stack.m
+$ lanlokun@ubuntu:~/monty$ ./monty.run bytecodes/queue_stack.m
 1
 2
 3
@@ -471,26 +471,26 @@ $ amonkeyprogrammer@ubuntu:~/monty$ ./monty.run bytecodes/queue_stack.m
 2
 3
 11111
-$ amonkeyprogrammer@ubuntu:~/monty$
+$ lanlokun@ubuntu:~/monty$
 ```
 
 ## Some Brainfuck Tasks
 
 [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck) is an esoteric programming language created in 1993 by Urban Müller. Here are some testing scripts.
 
-## Print Holberton
+## Print Alx
 
 Write a Brainf\*ck script that prints Holberton, followed by a new line.
 
 * All your Brainf\*ck files should be stored inside the bf sub directory
 * You can install the bf interpreter to test your code: `sudo apt-get install bf`
 
-**Source:** [bf/1000-holberton.bf](https://github.com/monoprosito/monty/blob/master/bf/1000-holberton.bf)
+**Source:** [bf/1000-alx.bf](https://github.com/monoprosito/monty/blob/master/bf/1000-holberton.bf)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty/bf$ bf 1000-holberton.bf 
+$ lanlokun@ubuntu:~/monty/bf$ bf 1000-holberton.bf 
 Holberton
-$ amonkeyprogrammer@ubuntu:~/monty/bf$ 
+$ lanlokun@ubuntu:~/monty/bf$ 
 ```
 
 ## Add two digits
@@ -503,7 +503,7 @@ Add two digits given by the user.
 **Source:** [bf/1001-add.bf](https://github.com/monoprosito/monty/blob/master/bf/1001-add.bf)
 
 ```
-$ amonkeyprogrammer@ubuntu:~/monty/bf$ bf ./1001-add.bf
+$ lanlokun@ubuntu:~/monty/bf$ bf ./1001-add.bf
 81
-9$ amonkeyprogrammer@ubuntu:~/monty/bf$ 
+9$ lanlokun@ubuntu:~/monty/bf$ 
 ```
